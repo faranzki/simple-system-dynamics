@@ -16,7 +16,9 @@ float start_population = 20;
 //settings
 
 //model setting constants
-int final_time = 100;
+float final_time = 100;
+float time_step = 1;
+
 //output file name
 std::string filename = "outputfile";
 
@@ -40,16 +42,16 @@ std::ofstream outputfile(filename.c_str());
 outputfile << "Time" << "," << "Population" << std::endl;
 outputfile << 0 << "," << POPULATION << std::endl;
 //starting the iterations
-for (int i = 1; i < final_time; i++){
+for (float i = 1; i * time_step < final_time; i++){
 	population_stress = POPULATION / carrying_capacity;
 	fertility_rate = (1 - population_stress) * 0.1;
 	mortality_rate = population_stress * 0.1;
 	birth_rate = POPULATION * fertility_rate;
 	death_rate = POPULATION * mortality_rate;
 	float net_flow = birth_rate - death_rate;
-	POPULATION += net_flow;	
+	POPULATION += net_flow * time_step;	
 	//writing the output of the iteration to file
-	outputfile << i << "," << POPULATION << std::endl;
+	outputfile << i * time_step << "," << POPULATION << std::endl;
 }
 
 outputfile.close();
