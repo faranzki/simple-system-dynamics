@@ -1,0 +1,17 @@
+CXXFLAGS=-g -Wall
+CC_FILES = $(wildcard *.cc)
+OBJ_FILES := $(patsubst %.cc,%.o,$(CC_FILES))
+HEADER_FILES=$(patsubst %.cc,%.hh,$(CC_FILES))
+
+EXEC=heatmodel
+
+$(EXEC): $(OBJ_FILES) 
+	g++ -g $(OBJ_FILES) -o $@
+
+.o: $(HEADER_FILES)
+	g++ -c $(CXXFLAGS) $^ -o $@
+
+
+clean:
+	rm -f *.o *~ heatmodel
+

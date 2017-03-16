@@ -1,0 +1,5 @@
+README HEATING MODEL
+
+A simple model illustrating a system producing oscillations and a steady state error. 
+Download instructions: Download the files 'heating-model.cc' and 'Makefile-heatingmodel' into the same folder. Rename 'Makefile-heatingmodel' to 'Makefile'. 
+Compile and run instructions: Compile with 'make'. Run with ./heatmodel
