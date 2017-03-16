@@ -1,0 +1,5 @@
+README POPULATION MODEL
+
+A simple model illustrating a system producing S-shaped growth. 
+Download instructions: Download the files 'population-model.cc' and 'Makefile-populationmodel' into the same folder. Rename 'Makefile-populationmodel' to 'Makefile'. 
+Compile and run instructions: Compile with 'make'. Run with ./popmodel
