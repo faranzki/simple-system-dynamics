@@ -1,0 +1,9 @@
+This model is based on an experiment developed by Prof. Erling Moxnes from Bergen University with the aim to show that even in the absence of the Tragedy of Commons, renewable resources are often overexploited, because even experienced people are incapable of correctly perceiving the dynamics of renewable resources.
+The aim of the experiment is to have a user manage the size of a reindeer herd. The reindeers feed on lichen (some kind of moss). If the herd is too big, the lichen is overgrazed, and the animals, deprived of food, starve and die.
+Lichen grows on top of itself. Therefore, if there is too little lichen, the growth rate is relatively small. If there is too much lichen, the growth rate is also relatively small, since there is no more room for the lichen to grow on.
+The exact description of the experiment and the results can be consulted in E. Moxnes (2004). Misperceptions of basic dynamics: the case of renewable resource management. System Dynamics Review, Vol. 20, p. 139-162.
+In that paper, you can also find a graphical representation of the model, which was originally developed in Powersim. 
+
+Practical information: 
+Download the files 'reindeer-model.cc' and 'Makefile-reindeermodel' into the same folder. Rename the file 'Makefile-reindeermodel' to 'Makefile'. Compile with 'make'. Run with ./reindeermodel
+The programme is interactive and provides instant feedback to the user. 
