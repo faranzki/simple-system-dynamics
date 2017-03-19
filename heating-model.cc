@@ -51,7 +51,7 @@ for (float i = 1; i * time_step < final_time; i++){
 	cooling_rate = (TEMPERATURE - outside_temperature) / cooling_time;
 	TEMPERATURE += (heating_rate - cooling_rate) * time_step;
 	//writing the output of the iteration to file
-	outputfile << i * time_step << "," << TEMPERATURE << ";" << desired_temperature << std::endl;
+	outputfile << i * time_step << "," << TEMPERATURE << "," << desired_temperature << std::endl;
 }
 
 outputfile.close();
